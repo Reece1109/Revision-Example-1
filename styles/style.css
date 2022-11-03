@@ -1,0 +1,33 @@
+/*Universal styling*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: auto 1fr 100px;
+}
+.img{
+    width:300px;
+}
+header,main,footer{
+    min-width: 100vw;
+    grid-column: 1 / 4;
+}
+
+/*media query*/
+@media (width <= 720px) {
+    .container{
+        width: 100%;
+        flex-flow: column wrap;
+    }
+    .container img {
+        width:100%
+    }
+
+}
